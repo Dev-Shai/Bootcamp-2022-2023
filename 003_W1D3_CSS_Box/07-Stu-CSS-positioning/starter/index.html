@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS Positioning</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>CSS Positioning</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Square 1: Relative Position</h2>
+        <div class="container">
+          <img src="./assets/images/image-1.png" alt="box with number 1"/>
+          <img id="relative-box-2" src="./assets/images/image-2.png" alt="box with number 2"/>
+          <img src="./assets/images/image-3.png" alt="box with number 3"/>
+        </div>
+      </section>
+
+      <section>
+        <h2>Square 2: Absolute Position</h2>
+        <div class="container absolute-container">
+          <img src="./assets/images/image-1.png" alt="box with number 1"/>
+          <img id="absolute-box-2"src="./assets/images/image-2.png" alt="box with number 2"/>
+          <img src="./assets/images/image-3.png" alt="box with number 3"/>
+        </div>
+      </section>
+    </main>
+  </body>
+
+</html>
+<!-- 
+# Positioning
+
+Work with a partner to implement the following user story:
+
+* As a developer, I want to use the CSS position property to change the layout of my page.
+
+## Instructions
+
+Fix the given code so that:
+
+* `box 2` is positioned in the middle of `square 1` using relative positioning.
+* `box 2` is positioned outside of the upper-right corner of `square 2` using absolute positioning.
+
+Your solution must match the following image:
+
+![Box 2 is positioned in the center of Square 1, while in Square 2, Box 2 is positioned outside the square.](./assets/image-1.png)
+
+## 💡 Hints
+
+How does the CSS `position` property change the document's normal flow? 
+STUDENT ANSWER
+The block and inline elements behave when part of the "normal flow". Boxes in the normal flow will be part of a formatting context. Either block or inliner but not both at once. Block-level boxes are described as participatin in a block formatting context and inline in an inline formatting context. All items are in-flow apart from floated items, items with position absolute (including position: fixed which acts in the same way), the foot element (html)
+
+
+the CSS position function helps to arrange the items 
+
+## 🏆 Bonus
+
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+* What is the `z-index` property? 
+
+Use [Google](https://www.google.com) or another search engine to research this.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/z-index#:~:text=The%20z%2Dindex%20CSS%20property,those%20with%20a%20smaller%20one.
+---
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved. -->

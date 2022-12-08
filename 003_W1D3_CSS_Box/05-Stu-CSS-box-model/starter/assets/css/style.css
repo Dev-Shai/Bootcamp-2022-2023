@@ -1,0 +1,37 @@
+section {
+  width: 600px;
+  height: 600px;
+  text-align: center;
+  border: 15px solid black;
+}
+
+#box-1, #box-2, #box-3, #box-4 {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  background-color: rgb(165, 205, 240);
+
+  margin: 20px;
+  border: solid 8px  rgb(14, 14, 219);
+}
+
+/* #box-3, #box-4 {
+  width: 200px;
+  height: 200px;
+  padding-top: 33px;
+  padding-bottom: 66px;
+  align-self: center;
+}
+
+#box-1, #box-3 {
+  width: 200px;
+  height: 200px;
+  padding-right: 33px;
+  align-self: center;
+}
+#box-2, #box-4 {
+  width: 200px;
+  height: 200px;
+  padding-left: 33px;
+  align-self: center;
+} */
