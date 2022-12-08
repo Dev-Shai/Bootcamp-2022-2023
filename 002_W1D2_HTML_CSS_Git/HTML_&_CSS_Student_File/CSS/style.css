@@ -1,3 +1,7 @@
+*{
+  margin: 0; 
+}
+
 a {
      color: rgb(175, 2, 2);
     text-decoration: none;
@@ -14,26 +18,14 @@ header {
     color: #eee;
 }
 
-h1 {
-font-size: 28px;
-}
-
-h2 {
-font-size: 24px;
-}
-
 body {
     margin: 0;
     padding: 0;
     background-color: #efeee7;
     color: #333333;
   }
-
-*{
-   margin: 0; 
-}
   
-  /*INTRO TITLE*/
+  /*INTRO TITLE
   .intro-title{
     text-align: center;
     color: white;
@@ -44,7 +36,7 @@ body {
     backdrop-filter: blur(10px);
   }
   
-  /*ABOUT ME*/
+  /*ABOUT ME
   .about-me {
     text-align: center;
       font-family: calibri;
@@ -124,6 +116,8 @@ body {
       list-style-position: inside;
     }
 
+
+    /*
   .container {
     width:1024px;
     margin: 0 auto;
@@ -161,7 +155,7 @@ body {
     #contact-info {
         width: 30%
         text-align: left;
-        line-height: 1.5 ;
+        line-height: 1.5;
     }
 
 /* Make the container have a width of 1,024 pixels and center it. You do this using `margin: 0 auto;`.
