@@ -1,34 +1,43 @@
+/* Makes all elements on landing page by default have zero padding and margin, HTML always adds some padding, this allows us to fully work with the paramters */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* i've chosen to keep the body here although it could come after the headers, for ease of understanding the styles - it tells the background to be the noted colour */
+
 body {
     background-color: #d9dcd6;
 }
 
+/* padding includd in the header class, not to be confused with head */
 .header {
     padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+    /* added quotation marks around all font family parameters */
     background-color: #2a607c;
     color: #ffffff;
 }
 
+/* All Header classes affect the "Horiseon" logo in top left of the landing page as well as the onordered list that is acting as the nav bar*/
 .header h1 {
     display: inline-block;
     font-size: 48px;
 }
 
+/* affects the "seo" segment of Horiseon logo */
 .header h1 .seo {
     color: #d9dcd6;
 }
 
+/* affects all of the header section */
 .header div {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* added quote markes around all of font-family parameters */
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
     font-size: 20px;
 }
 
@@ -36,6 +45,7 @@ body {
     list-style-type: none;
 }
 
+/* allows the nav bar links to be displayed side by side and act as a block, takes it out of the normal fow */
 .header div ul li {
     display: inline-block;
     margin-left: 25px;
@@ -50,31 +60,39 @@ p {
     font-size: 16px;
 }
 
+/* below class relates to the landing page image with people */
 .hero {
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
     background-image: url("../images/digital-marketing-meeting.jpg");
+    /* allows the image to span across the page */
     background-size: cover;
     background-position: center;
 }
 
+/* the three images under each sub-header are classed as float left */
 .float-left {
     float: left;
     margin-right: 25px;
 }
 
+
+/* the three small icons relating to the "benefits" are float left */
 .float-right {
     float: right;
     margin-left: 25px;
 }
 
+
+/* relates to all text and images included in the div class content, this SEO, ORM, and SMM sections */
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
+/* relates to all text and images included in the div class benefits: benefit-lead, - brand, and -cost*/
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -82,7 +100,7 @@ p {
     float: right;
     width: 20%;
     height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
     background-color: #2589bd;
 }
 
@@ -191,7 +209,7 @@ p {
 .footer {
     padding: 30px;
     clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
     text-align: center;
 }
 
