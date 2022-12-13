@@ -53,15 +53,15 @@ The following image shows the web application's appearance and functionality:
 
 Follow these instructions to create your project and deploy it to GitHub Pages:
 
-1. Create a new repository on your GitHub account and clone it to your computer.
+1. [x] Create a new repository on your GitHub account and clone it to your computer.
 
-2. When you're ready to deploy, use the `git add`, `git commit`, and `git push` commands to save and push your code to your GitHub repository.
+2. [x] When you're ready to deploy, use the `git add`, `git commit`, and `git push` commands to save and push your code to your GitHub repository.
 
-3. Navigate to your GitHub repository in the browser and then select the Settings tab on the right side of the page.
+3. [x] Navigate to your GitHub repository in the browser and then select the Settings tab on the right side of the page.
 
-4. On the Settings page, scroll down to the GitHub Pages section. Then, in the section labeled Source, select the `main` branch as your source.
+4. [x] On the Settings page, scroll down to the GitHub Pages section. Then, in the section labeled Source, select the `main` branch as your source.
 
-5. Navigate to <your-github-username.github.io/your-repository-name> and you will find that your new webpage has gone live! For example, if your GitHub username is "lernantino" and the project is "css-demo-site", then your URL would be <lernantino.github.io/css-demo-site>.
+5. [x] Navigate to <your-github-username.github.io/your-repository-name> and you will find that your new webpage has gone live! For example, if your GitHub username is "lernantino" and the project is "css-demo-site", then your URL would be <lernantino.github.io/css-demo-site>.
 
 You can also refer to this [YouTube video on enabling GitHub Pages](https://youtu.be/P4Mu1t5rIXg) for more guidance.
 
@@ -77,45 +77,45 @@ This challenge is assessed on the following criteria:
 
 * Satisfies all of the above acceptance criteria plus the following code improvements:
 
-  * Application's links all function correctly.
+  * [x] Application's links all function correctly.
 
-  * Application's CSS selectors and properties are consolidated and organized to follow semantic structure.
+  * [x] Application's CSS selectors and properties are consolidated and organized to follow semantic structure.
 
-  * Application's CSS file is properly commented.
+  * [x] Application's CSS file is properly commented.
 
 #### Deployment: 32%
 
-* Application deployed at live URL.
+* [x] Application deployed at live URL.
 
-* Application loads with no errors.
+* [x] Application loads with no errors.
 
-* Application GitHub URL submitted.
+* [x] Application GitHub URL submitted.
 
-* GitHub repository that contains application code.
+* [x] GitHub repository that contains application code.
 
 #### Application Quality: 15%
 
-* Application resembles (at least 90%) screenshots provided in the challenge instructions.
+* [x] *I believe so* Application resembles (at least 90%) screenshots provided in the challenge instructions.
 
 #### Repository Quality: 13%
 
-* Repository has a unique name.
+* [x] Repository has a unique name.
 
-* Repository follows best practices for file structure and naming conventions.
+* [x] *I believe so* Repository follows best practices for file structure and naming conventions.
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+* [x] *I believe so* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
 
-* Repository contains multiple descriptive commit messages.
+* [x] *I believe so - please see commit that notes several commits were made whilst the repo was a directory which can be found in my "Bootcamp-2022-2023/004_W1_Challenge" directory* Repository contains multiple descriptive commit messages.
 
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+* [x] Repository contains quality README file with description, screenshot, and link to deployed application.
 
 ### Review
 
 You are required to submit the following for review:
 
-* The URL of the deployed application.
+* [x] The URL of the deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+* [x] The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
 ---
 © 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
