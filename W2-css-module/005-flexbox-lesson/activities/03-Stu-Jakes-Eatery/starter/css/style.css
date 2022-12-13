@@ -106,6 +106,10 @@ width: 50%;
 /* Footer Styles */
 
 
+.footer a {
+    text-decoration: none;
+}
+
 .footer {
     display: flex;
     background-color: black;
@@ -121,19 +125,19 @@ width: 50%;
 .fb {
     padding-left: 30px;
     padding-right: 30px;
-    text-decoration: none;
+    /* text-decoration: none; */
     color:rgb(140, 208, 247)
 }
 
 .tw {
     padding-left: 30px;
     padding-right: 30px;
-    text-decoration: none;
+    /* text-decoration: none; */
     color:rgb(252, 255, 100)
 }
 .ig {
     padding-left: 30px;
     padding-right: 30px;
-    text-decoration: none;
+    /* text-decoration: none; */
     color:rgb(211, 51, 51)
 }
