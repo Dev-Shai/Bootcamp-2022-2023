@@ -31,7 +31,9 @@ It is highly recommended to try out these commands in chromes web inspector to s
   - flex-end
   - flex-start
   */
-
+  /* align-items: center; */
+  /* align-items: flex-end; */
+  align-items: flex-start;
 }
 .justifyContent {
 /*
@@ -44,6 +46,7 @@ It is highly recommended to try out these commands in chromes web inspector to s
 - space-around
 - space-evenly
 */
+  justify-content: flex-start ;
 
 }
 .perfectlyCentered {
@@ -52,5 +55,7 @@ It is highly recommended to try out these commands in chromes web inspector to s
 - Then type out the css property align-items: center;
 - Reload the browser and see for yourslef that your item is perfectly centered!
 */
+  justify-content: center;
+  align-items: center;
 
 }

@@ -1,4 +1,15 @@
+.logo {
+background: white;
+height: 230px;
+background: url("./images/jakes-logo.png") no-repeat center;
+}
+
 /* Navigation styles */
+.nav {
+display: flex;
+
+
+}
 
 /* Column styles */
 
