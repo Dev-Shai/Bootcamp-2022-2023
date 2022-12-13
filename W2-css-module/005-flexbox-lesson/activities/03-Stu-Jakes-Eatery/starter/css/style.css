@@ -1,16 +1,139 @@
+/* Logo styles */
+p {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
 .logo {
-background: white;
-height: 230px;
-background: url("./images/jakes-logo.png") no-repeat center;
+    background: white;
+    height: 230px;
+    background: url("../images-01/jakes-logo.png") no-repeat center;
 }
 
 /* Navigation styles */
-.nav {
-display: flex;
 
+.nav {
+    display: flex;
+    background-color: black;
+    padding: 20px;
 
 }
 
-/* Column styles */
+.left, .center, .right {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.left, .right {
+width: 25%;
+}
+
+.center {
+    width: 50%;
+}
+
+.center a {
+color: white;
+padding: 10px;
+font-size: 18px;
+text-decoration: none;
+font-family: Arial;
+}
+
+button {
+color: black;
+padding: 15px;
+font-size: 16px;
+width: 50%;
+}
+
+.right button {
+    background-color: yellow;
+}
+
+
+.left button {
+    background-color: skyblue;
+}
+
+/* Column styles */
+.column {
+    display: flex;
+    height: 1200px;
+    width: 800px;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.meal1, .meal2, .meal3 {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.meal1 {
+    margin-top: 20px;
+    background-image: url("../images-01/steak.png");
+}
+
+.meal2 {
+    margin-top: 20px;
+    background-image: url("../images-01/soup.png");
+}
+
+.meal3 {
+    margin-top: 20px;
+    background-image: url("../images-01/cheesecake.png");
+}
+
+.text {
+    background: rgb(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 20px 40px;
+    color: white;
+}
 /* Footer Styles */
+
+
+.footer {
+    display: flex;
+    background-color: black;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: Arial;
+}
+
+.fb {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    color:rgb(140, 208, 247)
+}
+
+.tw {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    color:rgb(252, 255, 100)
+}
+.ig {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    color:rgb(211, 51, 51)
+}
