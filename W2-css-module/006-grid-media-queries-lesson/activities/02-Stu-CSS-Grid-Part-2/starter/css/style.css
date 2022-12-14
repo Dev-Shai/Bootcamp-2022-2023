@@ -1,3 +1,43 @@
+/* Media Queries */
+
+@media only screen and (max-width: 1000px) {
+  #navigation {
+    display: 0;
+  }
+
+  .icons {
+    margin-left: auto;
+  } 
+}
+
+@media only screen and (max-width: 600px) {
+  #headline {
+    position: static;
+    margin: 20px;
+  }
+
+  #heroGrid {
+    grid-template-areas: 
+      "featuredProduct featuredProduct"
+      "secondaryProduct CTA";
+  } 
+
+  #categoryGrid {
+    display: grid;
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "bookcases" 
+      "bedroom" 
+      "patio"
+      "couches"
+      "desks"
+      ;
+  }
+}
+
+
+
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -55,7 +95,68 @@ body {
 
 /* Category Grid CSS */
 
+.subHeading {
+  text-align: center;
+  border-bottom: 2px solid black;
+  width: 300px;
+  margin: 50px auto;
+}
 
+#categoryGrid {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "bk bd pat"
+  "couch couch pat"
+  "dsk dsk dsk"
+  ;
+}
+
+#bookcases {
+  grid-area: bk;
+  background-image: url("../images/bookcases@2x.png");
+
+}
+#bedroom {
+  grid-area: bd;
+  background-image: url("../images/beds@2x.png");
+}
+
+#couches {
+  grid-area: couch;
+  background-image: url("../images/couch@2x.png");
+}
+
+#patio {
+  grid-area: pat;
+  background-image: url("../images/patio@2x.png");
+}
+
+#desks {
+  grid-area: dsk;
+  background-image: url("../images/desks@2x.png");
+}
+
+.categoryGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.heading {
+  background-color: rgba(0,0,0,0.7);
+  padding: 15px;
+  height: 25px;
+  color: white;
+  font-size: 18px;
+  border-bottom: 5px solid #FF6200;
+}
 
 
 /* Navigation CSS */

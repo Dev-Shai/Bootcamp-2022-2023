@@ -8,12 +8,54 @@ body {
   display: grid;
   min-height: 500px;
   height: 70vh;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 75% 25%;
+  grid-template-areas: 
+    "fp sp"
+    "fp  CTA";
 }
 
 /* Category Grid CSS */
+#featuredProduct {
+  grid-area: fp;
+  background-image: url("../images/furniture1 3.png");
+}
 
+#secondaryProduct {
+  grid-area: sp;
+  background-image: url("../images/furniture2 2.png");
+}
+#CTA {
+  grid-area: CTA;
+  background-image: url("../images/woodbg 2.png");
+}
 
+#CTA {
+  justify-content: 0px 5%;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: space-around;
 
+}
+
+.heroGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  position: relative;
+  font-size: 16px;
+}
+
+#headline {
+  border-bottom: 5px solid #FF6200;
+  background-color: rgba(255,255,255,0.8);
+  position: absolute;
+  top: 20%;
+  right: -05%;
+  z-index: 100;
+  padding: 2%;
+}
 
 /* Navigation CSS */
 /* CHECK OUT THIS CODE BELOW IF YOU WANT TO GET A REFRESHER ON FLEX */
