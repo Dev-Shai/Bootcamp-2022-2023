@@ -22,6 +22,7 @@ h2 {
   font-size: 250%;
 }
 
+
 nav ul {
   display: flex;
   justify-content: space-between;
@@ -78,4 +79,11 @@ footer {
   main {
     max-width: 1200px;
   }
+}
+
+/* added the code to put the form emoji next to any link that contains a .css file type */
+a[href$='.css']::after {
+  content: '📝';
+  display: inline-block;
+  margin-left: 3px;
 }
