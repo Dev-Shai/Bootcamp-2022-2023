@@ -33,7 +33,7 @@ p {
   background: url("../images/transparency.png");
   background-color: transparent !important;
   background-size: cover;
-  z-index:10;
+  z-index: 100;
 }
 
 .navbar-nav {
