@@ -20,30 +20,30 @@
 //   console.log("Invalid input. Please enter a number from 1 to 7.");
 // }
 
-var day = prompt("Please enter a number from 1 to 7 to receive the corresponding day of the week in the console:");
+let day = prompt("Please enter a number from 1 to 7 to receive the corresponding day of the week in the console:");
 
-switch(day) {
-  case "1":
-    console.log("Monday");
+switch (Number(day)) {
+  case 1:
+    alert("Monday");
     break;
-  case "2":
-    console.log("Tuesday");
+  case 2:
+    alert("Tuesday");
     break;
-  case "3":
-    console.log("Wednesday");
+  case 3:
+    alert("Wednesday");
     break;
-  case "4":
-    console.log("Thursday");
+  case 4:
+    alert("Thursday");
     break;
-  case "5":
-    console.log("Friday");
+  case 5:
+    alert("Friday");
     break;
-  case "6":
-    console.log("Saturday");
+  case 6:
+    alert("Saturday");
     break;
-  case "7":
-    console.log("Sunday");
+  case 7:
+    alert("Sunday");
     break;
   default:
-    console.log("Invalid input. Please enter a number from 1 to 7.");
+    alert("Invalid input. Please enter a number from 1 to 7.");
 }
