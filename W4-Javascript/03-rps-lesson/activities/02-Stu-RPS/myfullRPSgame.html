@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rock Paper Scissors Game</title>
+<style>
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.choices {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+button {
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+#rock {
+    background-color: #9e6231;
+}
+#paper {
+    background-color: #f5e1da;
+}
+#scissors {
+    background-color: #8f8e8e;
+}
+#results {
+    font-size: 2em;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="choices">
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+</div>
+<div id="results"></div>
+</div>
+<script>
+const getComputerChoice = () => {
+    switch (Math.floor(Math.random() * 3)) {
+    case 0:
+        return 'rock';
+        break;
+    case 1:
+        return 'paper';
+        break;
+    case 2:
+        return 'scissors';
+        break;
+    }
+}
+
+const determineWinner = (userChoice, computerChoice) => {
+    if (userChoice === computerChoice) {
+    return 'The game is a tie!';
+    }
+    if (userChoice === 'rock') {
+    if (computerChoice === 'paper') {
+        return 'The computer won!';
+    } else {
+        return 'You won!';
+    }
+    }
+    if (userChoice === 'paper') {
+    if (computerChoice === 'scissors') {
+        return 'The computer won!';
+    } else {
+        return 'You won!';
+    }
+    }
+    if (userChoice === 'scissors') {
+    if (computerChoice === 'rock') {
+        return 'The computer won!';
+    } else {
+        return 'You won!';
+    }
+    }
+}
+
+const playGame = userChoice => {
+    const computerChoice = getComputerChoice();
+    document.getElementById('results').innerHTML = determineWinner(userChoice, computerChoice);
+}
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => {
+    button.addEventListener('click', e => playGame(e.target.id));
+});
+</script>
+</body>
+</html>
