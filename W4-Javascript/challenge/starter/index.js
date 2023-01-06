@@ -1,4 +1,4 @@
-var finances = [
+const finances = [
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
 ['Mar-2010', 322013],
@@ -86,3 +86,40 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+let totalProfit = 0;
+let minProfit = Number.MAX_VALUE;
+let maxProfit = Number.MIN_VALUE;
+let minMonth = '';
+let maxMonth = '';
+let maxLossMonth = '';
+let maxLoss = Number.MIN_VALUE;
+
+for (const [month, profit] of finances) {
+  totalProfit += profit;
+
+  if (profit < minProfit) {
+    minProfit = profit;
+    minMonth = month;
+  }
+
+  if (profit > maxProfit) {
+    maxProfit = profit;
+    maxMonth = month;
+  }
+
+  if (profit < maxLoss) {
+    maxLoss = profit;
+    maxLossMonth = month;
+  }
+}
+
+const avgProfit = totalProfit / finances.length;
+
+console.log(`Total profit: ${totalProfit}`);
+console.log(`Average profit: ${avgProfit}`);
+console.log(`Minimum profit: ${minProfit} in ${minMonth}`);
+console.log(`Maximum profit: ${maxProfit} in ${maxMonth}`);
+console.log(`Number of months: ${finances.length}`);
+console.log(`Maximum loss: ${maxLoss} in ${maxLossMonth}`);
+
