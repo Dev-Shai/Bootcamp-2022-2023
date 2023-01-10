@@ -115,11 +115,144 @@ for (const [month, profit] of finances) {
 }
 
 const avgProfit = totalProfit / finances.length;
-
-console.log(`Total profit: ${totalProfit}`);
-console.log(`Average profit: ${avgProfit}`);
-console.log(`Minimum profit: ${minProfit} in ${minMonth}`);
-console.log(`Maximum profit: ${maxProfit} in ${maxMonth}`);
+console.log(`Financial Analysis \n ----------------------------`);
 console.log(`Number of months: ${finances.length}`);
-console.log(`Maximum loss: ${maxLoss} in ${maxLossMonth}`);
+console.log(`Net total profit: ${totalProfit}`);
+console.log(`Average profit: ${avgProfit}`);
+console.log(`Minimum profit/loss over entire period: ${minProfit} in ${minMonth}`);
+console.log(`Greatest Increase in Profits: ${maxProfit} in ${maxMonth}`);
+console.log(`Greatest Decrease in Profits: ${maxLoss} in ${maxLossMonth}`);
+
+// Initialize variables
+// Initialize variables
+// let total = 0;
+// let totalChange = 0;
+// let highestIncrease = -1000000000; // start with a very low value
+// let highestDecrease = 1000000000; // start with a very high value
+// let highestIncreaseMonth;
+// let highestDecreaseMonth;
+// let highestValue = -1000000000; // start with a very low value
+// let lowestValue = 1000000000; // start with a very high value
+
+// // Loop through each month
+// for (let i = 0; i < finances.length; i++) {
+//   // Calculate change from previous month
+//   let change;
+//   if (i > 0) {
+//     change = finances[i][1] - finances[i - 1][1];
+//   } else {
+//     change = 0;
+//   }
+
+//   // Update highest increase and highest decrease
+//   if (change > highestIncrease) {
+//     highestIncrease = change;
+//     highestIncreaseMonth = finances[i][0];
+//   }
+//   if (change < highestDecrease) {
+//     highestDecrease = change;
+//     highestDecreaseMonth = finances[i][0];
+//   }
+
+//   // Update highest and lowest values seen so far
+//   highestValue = Math.max(highestValue, finances[i][1]);
+//   lowestValue = Math.min(lowestValue, finances[i][1]);
+
+//   // Add to totals
+//   total += finances[i][1];
+//   totalChange += change;
+// }
+
+// // Calculate average change
+// let averageChange = totalChange / (finances.length - 1);
+
+// // Log results
+// console.log(`Total months: ${finances.length}`);
+// console.log(`Average month-to-month change: ${averageChange.toFixed(2)}`);
+// console.log(`Greatest increase in profits: ${highestIncreaseMonth} (${highestIncrease})`);
+// console.log(`Greatest decrease in profits: ${highestDecreaseMonth} (${highestDecrease})`);
+
+
+// --
+// const earningsArray = data.map((el) => el[1]);
+
+// const profitMonths = data.filter((el) => el[1] > 0);
+// const salesOnProfitMonths = profitMonths
+//   .map((el) => el[1])
+//   .reduce((accVal, curVal) => accVal + curVal, 0);
+
+// const avgOfProfitAndLoss =
+//   earningsArray.reduce((accVal, curVal) => accVal + curVal, 0) / data.length; // get the average of all total and losses
+
+// const maxMonth = {
+//   monthName: '',
+//   profit: 0,
+// };
+
+// const minMonth = {
+//   monthName: '',
+//   profit: 0,
+// };
+
+// data.forEach((month) => {
+//   if (month[1] > maxMonth.profit) {
+//     maxMonth.monthName = month[0];
+//     maxMonth.profit = month[1];
+//   }
+
+//   if (month[1] < minMonth.profit) {
+//     minMonth.monthName = month[0];
+//     minMonth.profit = month[1];
+//   }
+
+//   return { maxMonth, minMonth };
+// });
+
+// console.log('Total sale of profit months: ', salesOnProfitMonths);
+// console.log('Total average : ', avgOfProfitAndLoss);
+// console.log('The month with max profit is : ', maxMonth);
+// console.log('The month with min profit is : ', minMonth);
+
+
+
+// --
+
+
+
+
+// let totalProfit = 0;
+// let minProfit = Number.MAX_VALUE;
+// let maxProfit = Number.MIN_VALUE;
+// let minMonth = '';
+// let maxMonth = '';
+// let maxLossMonth = '';
+// let maxLoss = Number.MIN_VALUE;
+
+// for (const [month, profit] of finances) {
+//   totalProfit += profit;
+
+//   if (profit < minProfit) {
+//     minProfit = profit;
+//     minMonth = month;
+//   }
+
+//   if (profit > maxProfit) {
+//     maxProfit = profit;
+//     maxMonth = month;
+//   }
+
+//   if (profit < maxLoss) {
+//     maxLoss = profit;
+//     maxLossMonth = month;
+//   }
+// }
+
+// const avgProfit = totalProfit / finances.length;
+
+// console.log(`Total profit: ${totalProfit}`);
+// console.log(`Average profit: ${avgProfit}`);
+// console.log(`Minimum profit: ${minProfit} in ${minMonth}`);
+// console.log(`Maximum profit: ${maxProfit} in ${maxMonth}`);
+// console.log(`Number of months: ${finances.length}`);
+// console.log(`Maximum loss: ${maxLoss} in ${maxLossMonth}`);
 
