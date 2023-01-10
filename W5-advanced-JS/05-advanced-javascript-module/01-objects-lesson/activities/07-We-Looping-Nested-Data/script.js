@@ -50,6 +50,8 @@ var menu = {
     sizes: sizes
 };
 
+var menuDiv = document.getElementById("menu-options");
+
 console.log('You can choose from the following drink options: ');
 for (var i = 0; i < menu.drinks.length; i++) {
     console.log(drinks[i].name);
@@ -69,5 +71,16 @@ for (var i = 0; i < menu.drinks.length; i++) {
 
 console.log('The price of a coldBrew is: $' + menu.drinks[2].price);
 console.log('The price of a latte and a coffee is: $' + (menu.drinks[1].price + menu.drinks[0].price));
-console.log('You can choose from the following milk options: ' + menu.milks);
-console.log('You can choose from the following size options: ' + menu.sizes);
+console.log(`You can choose from the following milk options: ${menu.milks.join(", ")}`);
+console.log(`You can choose from the following size options: ${menu.sizes.join(", ")}`);
+
+var menuDiv = document.getElementById("menu-options");
+
+//create a unordered list element
+var ul = document.createElement("ul");
+for (var i = 0; i < menu.drinks.length; i++) {
+    var li = document.createElement("li");
+    li.innerHTML = drinks[i].name;
+    ul.appendChild(li);
+}
+menuDiv.appendChild(ul);
