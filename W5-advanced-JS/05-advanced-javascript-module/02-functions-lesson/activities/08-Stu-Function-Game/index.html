@@ -1,0 +1,33 @@
+<doctype html>
+<html>
+  <body>
+      <h1>Blackjack</h1><br>
+      Cards:
+      <div id="dealer-cards"></div>
+      <br>
+      <div id="player-cards"></div>
+      <br>
+
+      <form name="blackjack" onSubmit="newGame(); return false;">
+      <input type='submit' id='new-game-button' value='Deal'/>
+      <input type='button' id='hit-button' value='Hit' onclick='hit();' disabled/>
+      <input type='button' id='stand-button' value='Stand' onclick='stand();' disabled/>
+      <br>
+      <br>
+      <div id=player-money></div>
+      Bet: 
+      <input type='number' id='bet' value='10' min='1' max="100"/>
+    </form>
+
+      <br>
+      <br>
+      Score:
+      <div id="player-score"></div>
+      <div id="dealer-score"></div>
+      <br>
+      <h2 id="message-board"></h2>
+      <script src="blackJackV2.0.js">
+      </script>
+</body>
+    
+</html>
