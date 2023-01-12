@@ -1,8 +1,4 @@
-console.log(this);
 
-function helloThis() {
-  console.log('Inside this function, this is ' + this);
-}
 
 var child = {
   age: 10,
@@ -20,3 +16,6 @@ var investor = {
     },
   },
 };
+
+child.ageTenYears();
+investor.investment.investmentGrowth();
