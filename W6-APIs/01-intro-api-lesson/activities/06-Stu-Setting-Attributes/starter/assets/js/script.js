@@ -1,6 +1,7 @@
 var site1El = document.querySelector(".site1");
 var site2El = document.querySelector(".site2");
 var site3El = document.querySelector(".site3");
+var h4Classes = document.querySelectorAll("h4");
 
 site1El.children[0].textContent = "Site 1";
 site1El.children[1].setAttribute("href", "https://google.com");
@@ -20,4 +21,11 @@ site3El.children[1].children[0].setAttribute("src", "assets/images/image_3.jpg")
 site3El.children[1].children[0].setAttribute("alt", "women working");
 site3El.children[1].children[0].setAttribute("style", "padding:10px;");
 
+// setattribute lets you manipulate attributes on an element
 // Write Your Code Below
+console.log(document.querySelectorAll("h4"));
+// Loops through divTags to set each one to have the color blue and the font size of 30px
+
+for (var i = 0; i < h4Classes.length; i++) {
+    h4Classes[i].setAttribute("style", "color:blue; font-size: 30px; font-weight: bold; ");
+}
