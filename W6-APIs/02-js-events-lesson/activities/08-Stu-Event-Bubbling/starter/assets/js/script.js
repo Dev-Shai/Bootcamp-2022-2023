@@ -1,4 +1,4 @@
-// TODO: Which element is the following line of code selecting?
+// TODO: Which element is the following line of code selecting? the document box
 var carousel = document.querySelector(".carouselbox");
 // TODO: Which element is the following line of code selecting?
 var next = carousel.querySelector(".next");
