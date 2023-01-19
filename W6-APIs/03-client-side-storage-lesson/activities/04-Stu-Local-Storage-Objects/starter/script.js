@@ -1,3 +1,5 @@
+// TODO - MAKE A RENDEREDLASTREGISTERED SO IT WORKS AND STAYS ON PAGE
+
 var firstNameInput = document.querySelector("#first-name");
 var lastNameInput = document.querySelector("#last-name");
 var emailInput = document.querySelector("#email");
@@ -8,6 +10,21 @@ var userFirstNameSpan = document.querySelector("#user-first-name");
 var userLastNameSpan = document.querySelector("#user-last-name");
 var userEmailSpan = document.querySelector("#user-email");
 var userPasswordSpan = document.querySelector("#user-password");
+
+// renderLastRegistered();
+
+// console.log(JSON.parse(localStorage.getItem("user")))
+// function renderLastRegistered() {
+//   if (!user) {
+//     return;
+//   }
+//   else 
+//   SON.parse(localStorage.getItem("user"));
+//   userFirstNameSpan.textContent = lastUser.firstName;
+//   userLastNameSpan.textContent = lastUser.lastName;
+//   userEmailSpan.textContent = lastUser.email;
+//   userPasswordSpan.textContent = lastUser.password;
+//   }
 
 function displayMessage(type, message) {
   msgDiv.textContent = message;
@@ -39,13 +56,15 @@ signUpButton.addEventListener("click", function(event) {
 
     // set new submission
     console.log(user);
-    localStorage.setItem("user", user);
+    localStorage.setItem("user", JSON.stringify(user));
     
     // get most recent submission
-    var lastUser = localStorage.getItem("user");
+    var lastUser = JSON.parse(localStorage.getItem("user"));
     userFirstNameSpan.textContent = lastUser.firstName;
     userLastNameSpan.textContent = lastUser.lastName;
     userEmailSpan.textContent = lastUser.email;
     userPasswordSpan.textContent = lastUser.password;
+    // renderLastRegistered();
   }
 });
+
