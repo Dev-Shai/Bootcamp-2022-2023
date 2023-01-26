@@ -51,6 +51,17 @@
       captainPlanet.animate({ top: "50px", left: "80px" }, "fast");
     });
 
+    
+
+    // Rotate Buttons
+    $(".right-spin-button").on("click", function(){
+      var div = $("div");
+      captainPlanet.animate({height: '100px', width: '100px', opacity: '0.0'}, "fast");
+      captainPlanet.animate({opacity: '1.0'}, "slow");
+    }); 
+
+
+
     // Keyboard move controls
     $(document).keyup(function(e) {
       switch (e.which) {

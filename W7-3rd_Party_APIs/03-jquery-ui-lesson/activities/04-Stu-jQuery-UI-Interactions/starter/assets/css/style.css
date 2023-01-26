@@ -17,3 +17,10 @@ h6 {
   font-weight: 200;
   font-style: italic;
 }
+
+.list-group-item {
+  border: 1px solid rgb(117, 117, 117);
+  border-radius: 5px !important;
+  padding: 3px !important; 
+  margin: 3px !important; 
+}

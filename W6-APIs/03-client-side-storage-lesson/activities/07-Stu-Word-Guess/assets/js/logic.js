@@ -1,14 +1,18 @@
-const startButton = document.getElementById("start");
-const questionTitle = document.getElementById("question-title");
-const choices = document.getElementById("choices");
-const timeDisplay = document.getElementById("time");
-const endScreen = document.getElementById("end-screen");
-const finalScore = document.getElementById("final-score");
-const initialsInput = document.getElementById("initials");
-const submitButton = document.getElementById("submit");
-const highscoresList = document.getElementById("highscores");
-const clearButton = document.getElementById("clear");
-const feedback = document.getElementById("feedback");
+// make timer stop when questions are done
+const startButton = document.querySelector("#start");
+const questionTitle = document.querySelector("#question-title");
+const choices = document.querySelector("#choices");
+const timeDisplay = document.querySelector("#time");
+const endScreen = document.querySelector("#end-screen");
+const finalScore = document.querySelector("#final-score");
+const initialsInput = document.querySelector("#initials");
+const submitButton = document.querySelector("#submit");
+const highscoresList = document.querySelector("#highscores");
+const feedback = document.querySelector("#feedback");
+const startScreen = document.querySelector("#start-screen");
+const questionList = document.querySelector("#questions");
+const correctAudio = document.querySelector("#correct-audio");
+const incorrectAudio = document.querySelector("#incorrect-audio");
 
 let currentQuestionIndex = 0;
 let timeLeft = 60;
@@ -16,87 +20,79 @@ let score = 0;
 
 startButton.addEventListener("click", startQuiz);
 submitButton.addEventListener("click", saveScore);
-clearButton.addEventListener("click", clearHighscores);
 
 function startQuiz() {
-  startButton.classList.add("hide");
-  questionTitle.classList.remove("hide");
-  choices.classList.remove("hide");
-  showQuestion();
-  startTimer();
+    startButton.classList.add("hide");
+    questionTitle.classList.remove("hide");
+    questionList.classList.remove("hide")
+    choices.classList.remove("hide");
+    feedback.classList.remove("hide");
+    startScreen.classList.add("hide");
+    startTimer();
+    renderQuestions();
 }
 
-function showQuestion() {
-  const currentQuestion = questions[currentQuestionIndex];
-  questionTitle.innerText = currentQuestion.question;
-  choices.innerHTML = "";
-  currentQuestion.choices.forEach((choice, i) => {
-    const choiceButton = document.createElement("button");
-    choiceButton.innerText = choice;
-    choiceButton.classList.add("choice");
-    choiceButton.addEventListener("click", () => checkAnswer(choice));
-    choices.appendChild(choiceButton);
-  });
+function renderQuestions() {
+    const currentQuestion = questions[currentQuestionIndex];
+    questionTitle.innerText = currentQuestion.question;
+    choices.innerHTML = "";
+    currentQuestion.selections.forEach((selection, i) => {
+        const choiceButton = document.createElement("BUTTON");
+        choiceButton.innerText = selection;
+        choiceButton.classList.add("choices");
+        choiceButton.addEventListener("click", () => checkAnswer(selection));
+        choices.appendChild(choiceButton);
+    });
 }
 
 function checkAnswer(answer) {
-  if (answer === questions[currentQuestionIndex].correctAnswer) {
-    feedback.innerText = "Correct!";
-    feedback.classList.remove("hide");
-    score++;
-  } else {
-    feedback.innerText = "Incorrect!";
-    feedback.classList.remove("hide");
-    timeLeft -= 10;
-  }
-  currentQuestionIndex++;
-  if (currentQuestionIndex === questions.length || timeLeft === 0) {
-    endQuiz();
-  } else {
-    showQuestion();
-  }
+    if (answer === questions[currentQuestionIndex].correctAnswer) {
+        correctAudio.play();
+        feedback.innerText = "Correct!";
+        score++;
+    } else {
+        incorrectAudio.play();
+        feedback.innerText = "Incorrect!";
+        timeLeft -= 10;
+    };
+    currentQuestionIndex++;
+    if (currentQuestionIndex === questions.length) {
+        endQuiz();
+    } else {
+        renderQuestions();
+    }
 }
 
 function startTimer() {
-  setInterval(() => {
+setInterval(() => {
     timeLeft--;
-    timeDisplay.innerText = timeLeft;
-    if (timeLeft === 0) {
-      endQuiz();
+    if (timeLeft <= 0) {
+    timeDisplay.innerText = "Time's Up!";
+    endQuiz();
     }
-  }, 1000);
+    else if (currentQuestionIndex === questions.length) {
+        timeDisplay.innerText = "You've finished the quiz!";
+        endQuiz();
+    } else {
+    timeDisplay.innerText = timeLeft;
+    }
+}, 1000);
 }
 
+
 function endQuiz() {
-  endScreen.classList.remove("hide");
-  questionTitle.classList.add("hide");
-  choices.classList.add("hide");
-  finalScore.innerText = score;
+endScreen.classList.remove("hide");
+questionTitle.classList.add("hide");
+choices.classList.add("hide");
+finalScore.innerText = score;
+feedback.classList.add("hide");
 }
 
 function saveScore() {
-  const initials = initialsInput.value;
-  const highscore = { initials, score };
-  let highscores = JSON.parse(localStorage.getItem("highscores")) || [];
-  highscores.push(highscore);
-  localStorage.setItem("highscores", JSON.stringify(highscores));
-  window.location.href = "highscores.html";
+const initials = initialsInput.value;
+const highscore = { initials, score };
+let highscores = JSON.parse(localStorage.getItem("highscores")) || [];
+highscores.push(highscore);
+localStorage.setItem("highscores", JSON.stringify(highscores));
+window.location.href = "highscores.html";
 }
-
-function clearHighscores() {
-  localStorage.removeItem("highscores");
-  while (highscoresList.firstChild) {
-    highscoresList.removeChild(highscoresList.firstChild);
-  }
-}
-
-function displayHighscores() {
-  const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
-  highscores.forEach(highscore => {
-    const li = document.createElement("li");
-    li.innerText = `${highscore.initials} - ${highscore.score}`;
-    highscoresList.appendChild(li);
-  });
-}
-
-displayHighscores();
