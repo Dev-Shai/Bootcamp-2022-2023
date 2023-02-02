@@ -53,18 +53,32 @@
         }).then(function(response) {
 
           // Creates a div to hold the movie
+          var movieDiv = $("<div class='movie'>");
           // Retrieves the Rating Data
+          var rating = response.Rated;
           // Creates an element to have the rating displayed
+          var pOne = $("<p>").text("Rating: " + rating);
           // Displays the rating
+          movieDiv.append(pOne);
           // Retrieves the release year
+          var released = response.Released;
           // Creates an element to hold the release year
+          var pTwo = $("<p>").text("Released: " + released);
           // Displays the release year
+          movieDiv.append(pTwo);
           // Retrieves the plot
+          var plot = response.Plot;
           // Creates an element to hold the plot
+          var pThree = $("<p>").text("Plot: " + plot);
           // Appends the plot
+          movieDiv.append(pThree);
           // Creates an element to hold the image
+          var image = $("<img>").attr("src", response.Poster);
           // Appends the image
+          movieDiv.append(image);
           // Puts the entire Movie above the previous movies.
+          $("#movies-view").prepend(movieDiv);
+          
         });
 
       }

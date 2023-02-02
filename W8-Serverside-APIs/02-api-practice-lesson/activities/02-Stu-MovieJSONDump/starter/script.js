@@ -18,7 +18,14 @@
 
   // =================================================================
 
-  // CODE GOES HERE
-
-  // =================================================================
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    console.log(queryURL);
+  console.log(response);
+//update the movie-view div with the movie info
+stringifiedResponse = JSON.stringify(response)
+  $("#movie-view").text(stringifiedResponse + "Movie: " + response.Title + "\n" + " Year: " + response.Year + " IMDB Rating: " + response.imdbRating + " Rotten Tomatoes Rating: " + response.Ratings[1].Value + " Country: " + response.Country + " Language: " + response.Language + " Plot: " + response.Plot + " Actors: " + response.Actors);
+  });
 });
