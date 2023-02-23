@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(67, 62, 100) ;
+    color: rgb(237, 237, 237);
+    font-family: calibri;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(237, 237, 237);
+    font-family: calibri;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(72, 72, 72);
+    font-family: calibri;
+}
+
+img {
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+ul {
+    padding-left: 40px;
+    font-size: 20px;
+    color: rgb(72, 72, 72);
+    font-family: calibri;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(237, 237, 237);
+    font-family: calibri;
+  }
+ 
+body {
+    background-color: rgb(230, 233, 240) ;
+}
+
+.card {
+    width: 80%;
+    margin: 30px auto;
+    background-color: rgb(237, 237, 237);
+    border: 5px solid rgb(20, 80, 100);
+    box-shadow: 5px 10px #888888;
+  }
+  
+  .my-navbar {
+    background-color: rgba(31, 31, 31, 0.5);
+    height: 30px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: calibri;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    font-weight: bold;
+    color: rgb(20, 80, 100);
+  }
+
+  .title-second-header {
+    text-align: center;
+    font-size: 20px;
+    color: rgb(237, 237, 237);
+    font-family: calibri;
+  }
