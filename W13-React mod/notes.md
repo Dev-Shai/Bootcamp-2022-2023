@@ -25,3 +25,13 @@ react native can be used for mobile
 using react:
 
 - 
+
+D2 
+props
+states
+lists
+- taking advantage of looping and the map looping method for programatically rendering components from an array of data
+setting up class componentrs and component state
+
+-
+- props are like function argument that you can 
