@@ -35,3 +35,9 @@ setting up class componentrs and component state
 
 -
 - props are like function argument that you can 
+
+--
+day 3
+forms conditional rendering and react router. also introducing the axios library and concept of component lifecycle
+
+"computed property name" looks like [nseonfv] and wil relate to the attribute found in the html Input class "name" 
