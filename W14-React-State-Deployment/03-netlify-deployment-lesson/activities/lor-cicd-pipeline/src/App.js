@@ -1,11 +1,12 @@
-import React from 'react';
 import './App.css';
-import CharacterGallery from './components/CharacterGallery.js'
+import React from 'react';
+import CharacterGallery from './components/CharacterGallery'
 
 function App() {
+
   return (
     <div data-test="component-app">
-    <CharacterGallery/>
+      <CharacterGallery />
     </div>
   );
 }
