@@ -19,6 +19,22 @@ class OmdbContainer extends Component {
       .catch(err => console.log(err));
   };
 
+  componentDidMount() {
+    this.searchMovies("The Matrix");
+  }
+
+  // Add a handleInputChange method that should be called whenever the user types into the input field. Inside of this method, set this.state.search equal to the new value of the input field. You can verify that you've completed this step correctly if you can now type into the input field.
+
+  handleInputChange = event => {
+    this.setState({ search: event.target.value });
+  };
+
+  // Add a handleFormSubmit method that should be called when the form is submitted. Inside of this method, utilize the API module to search the OMDb API for the value of this.state.search. Then update this component's result state with the result. You can verify that you completed this step correctly by searching for the name of a movie. If successful, you should see the movie poster and some information about the movie appear in the left card.
+  handleFormSubmit = event => {
+    event.preventDefault();
+    this.searchMovies(this.state.search);
+  };
+
   render() {
     return (
       <Container>
